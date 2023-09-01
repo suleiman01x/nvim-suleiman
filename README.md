@@ -15,6 +15,7 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update
 sudo apt install neovim
 ```
+
 [Packer](https://github.com/wbthomason/packer.nvim)も入れよう
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
