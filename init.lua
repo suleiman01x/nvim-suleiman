@@ -58,3 +58,4 @@ require('lazy').setup({
 vim.cmd([[colorscheme gruvbox]])
 require("suleiman.remap")
 require("suleiman.set")
+require("plugin")
