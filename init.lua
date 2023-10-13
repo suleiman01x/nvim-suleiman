@@ -21,6 +21,8 @@ require('lazy').setup({
   'mbbill/undotree',
   'nvim-tree/nvim-web-devicons',
   'jiangmiao/auto-pairs',
+  'nvim-lua/plenary.nvim',
+  'ThePrimeagen/harpoon',
   {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.2',
 	  dependencies = {
