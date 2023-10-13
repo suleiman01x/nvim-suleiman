@@ -1,4 +1,6 @@
 local lsp = require('lsp-zero').preset({})
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
 
 lsp.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
@@ -26,4 +28,12 @@ vim.diagnostic.config({
   float = {
     source = "always",  -- Or "if_many"
   },
+})
+
+cmp.setup({
+  mapping = cmp.mapping.preset.insert({
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+    ['<Tab>'] = cmp_action.tab_complete(),
+    ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
+  })
 })
