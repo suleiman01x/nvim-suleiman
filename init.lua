@@ -20,6 +20,7 @@ require('lazy').setup({
   'rebelot/kanagawa.nvim',
   'mbbill/undotree',
   'nvim-tree/nvim-web-devicons',
+  'jiangmiao/auto-pairs',
   {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.2',
 	  dependencies = {
@@ -47,7 +48,6 @@ require('lazy').setup({
     },
   },
   "lambdalisue/fern.vim",
-  "github/copilot.vim",
   {
     'stevearc/oil.nvim',
     config = function() require('oil').setup() end
