@@ -27,3 +27,6 @@ vim.opt.termguicolors = true
 
 -- use system clipboard
 vim.opt.clipboard = "unnamedplus"
+
+-- file
+vim.fileformat = "unix"

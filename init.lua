@@ -1,6 +1,8 @@
 
 vim.o.background = "dark"
 vim.g.mapleader = ' '
+vim.g.python3_host_prog = "C:\\Users\\Shun\\.pyenv\\pyenv-win\\versions\\3.11.3\\python3.exe"
+vim.g.python_host_prog = "C:\\Users\\Shun\\.pyenv\\pyenv-win\\versions\\3.11.3\\python.exe"
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
