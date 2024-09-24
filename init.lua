@@ -24,7 +24,11 @@ require('lazy').setup({
   'nvim-tree/nvim-web-devicons',
   'jiangmiao/auto-pairs',
   'nvim-lua/plenary.nvim',
-  'ThePrimeagen/harpoon',
+  {
+    'ThePrimeagen/harpoon',
+    branch = 'harpoon2',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
   {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.2',
 	  dependencies = {
@@ -38,7 +42,7 @@ require('lazy').setup({
   'nvim-treesitter/nvim-treesitter',
   {
     'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
+    branch = 'v4.x',
     dependencies = {
       -- LSP Support
       'neovim/nvim-lspconfig',             -- Required
@@ -56,6 +60,10 @@ require('lazy').setup({
     'stevearc/oil.nvim',
     config = function() require('oil').setup() end
   },
+  {
+    'akinsho/toggleterm.nvim', version = "*", config = true
+  },
+  { "folke/neoconf.nvim" },
 }
 )
 
