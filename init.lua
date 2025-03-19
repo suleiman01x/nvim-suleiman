@@ -22,7 +22,20 @@ require('lazy').setup({
   'rebelot/kanagawa.nvim',
   'mbbill/undotree',
   'nvim-tree/nvim-web-devicons',
-  'jiangmiao/auto-pairs',
+  {
+    'altermo/ultimate-autopair.nvim',
+    event={'InsertEnter'},
+    branch='v0.6',
+    opts={},
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({})
+    end
+  },
   'nvim-lua/plenary.nvim',
   {
     'ThePrimeagen/harpoon',
@@ -59,9 +72,6 @@ require('lazy').setup({
   {
     'stevearc/oil.nvim',
     config = function() require('oil').setup() end
-  },
-  {
-    'akinsho/toggleterm.nvim', version = "*", config = true
   },
   { "folke/neoconf.nvim" },
 }

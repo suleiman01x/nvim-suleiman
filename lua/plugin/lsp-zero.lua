@@ -63,3 +63,7 @@ cmp.setup({
     ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
   })
 })
+
+-- copilot setup
+vim.api.nvim_set_keymap('i', '<C-i>', 'copilot#Accept("<CR>")', { expr=true, noremap = true, silent = true })
+vim.g.copilot_no_tab_map = true

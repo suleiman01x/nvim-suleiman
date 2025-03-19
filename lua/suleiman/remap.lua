@@ -9,3 +9,5 @@ vim.keymap.set("", "<C-l>", "<C-w>l")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-N>")
 
 vim.o.mouse = ""
+
+vim.keymap.set("n", "<leader>t", function() vim.cmd('te') end)
