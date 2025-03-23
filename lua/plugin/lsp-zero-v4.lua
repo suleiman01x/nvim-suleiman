@@ -66,3 +66,6 @@ cmp.setup({
     ['<S-Tab>'] = cmp.mapping.select_prev_item({behavior = 'select'}),
   })
 })
+
+-- formatting options
+vim.keymap.set('n', '<leader>c', vim.cmd.LspZeroFormat)
