@@ -68,4 +68,4 @@ cmp.setup({
 })
 
 -- formatting options
-vim.keymap.set('n', '<leader>c', vim.cmd.LspZeroFormat)
+vim.keymap.set('n', '<leader>i', vim.cmd.LspZeroFormat)
