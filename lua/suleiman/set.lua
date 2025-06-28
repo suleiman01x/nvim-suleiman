@@ -32,3 +32,4 @@ vim.opt.clipboard = "unnamedplus"
 
 -- file
 vim.fileformat = "unix"
+

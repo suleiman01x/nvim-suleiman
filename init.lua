@@ -1,4 +1,3 @@
-
 vim.o.background = "dark"
 vim.g.mapleader = ' '
 vim.g.python3_host_prog = "C:\\Users\\Shun\\.pyenv\\pyenv-win\\versions\\3.11.3\\python3.exe"
@@ -23,12 +22,6 @@ require('lazy').setup({
   'mbbill/undotree',
   'nvim-tree/nvim-web-devicons',
   {
-    'altermo/ultimate-autopair.nvim',
-    event={'InsertEnter'},
-    branch='v0.6',
-    opts={},
-  },
-  {
     "kylechui/nvim-surround",
     version = "*",
     event = "VeryLazy",
@@ -43,14 +36,15 @@ require('lazy').setup({
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.2',
-	  dependencies = {
-		  {'nvim-lua/plenary.nvim'},
-		  {'nvim-telescope/telescope-live-grep-args.nvim'},
-	  },
-	  config = function()
-		  require('telescope').load_extension('live_grep_args')
-	  end
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.2',
+    dependencies = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-telescope/telescope-live-grep-args.nvim' },
+    },
+    config = function()
+      require('telescope').load_extension('live_grep_args')
+    end
   },
   'nvim-treesitter/nvim-treesitter',
   {
@@ -74,10 +68,16 @@ require('lazy').setup({
     config = function() require('oil').setup() end
   },
   { "folke/neoconf.nvim" },
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+  },
 }
 )
 
 vim.cmd([[colorscheme gruvbox]])
 require("suleiman.remap")
 require("suleiman.set")
+require("suleiman.filetypes")
 require("plugin")
