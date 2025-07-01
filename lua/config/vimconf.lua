@@ -23,4 +23,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.termguicolors = true
 
+-- weird windows bash setting
+vim.opt.shellcmdflag = '-c'
+
 -- todo: clipboard settings

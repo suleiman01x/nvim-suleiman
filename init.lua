@@ -9,3 +9,6 @@ require("config.mapping")
 
 -- load plugin specific config
 require("config.plugin")
+
+-- load lsp config
+require("config.lsp")
